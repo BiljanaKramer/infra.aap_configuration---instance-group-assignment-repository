@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    controller_hostname: "https://vm-10-1-230-16.ans.cee.ral3.lab.eng.rdu2.redhat.com"
+    controller_host: "https://vm-10-1-230-16.ans.cee.ral3.lab.eng.rdu2.redhat.com"
     controller_username: "admin"
     controller_password: "admin"
     controller_validate_certs: false
