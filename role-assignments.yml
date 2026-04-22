@@ -11,14 +11,9 @@
 
     controller_instance_groups:
       - name: my_instance_group
-        description: Example instance group
-        policy_instance_percentage: 100
-        is_container_group: false
-
-        # Role assignment section
         roles:
           - team: my_team
-            role: use   # This maps to "InstanceGroup Use"
+            role: use   # "InstanceGroup Use"
 
   roles:
     - infra.aap_configuration.controller_instance_groups
