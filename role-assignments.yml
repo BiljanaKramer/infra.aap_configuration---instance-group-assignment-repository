@@ -1,5 +1,5 @@
 ---
-- name: Configure AAP role assignments
+- name: Assign InstanceGroup Use role to a team
   hosts: localhost
   gather_facts: false
 
@@ -9,28 +9,16 @@
     controller_password: "admin"
     controller_validate_certs: false
 
-    controller_role_team_assignments:
-      - team: "my_team"
-        role_definition: "InstanceGroup Use"
-        assignment_objects:
-          - name: "my-instance-group"
-            type: "instance_groups"
+    controller_instance_groups:
+      - name: my_instance_group
+        description: Example instance group
+        policy_instance_percentage: 100
+        is_container_group: false
 
-  collections:
-    - infra.aap_configuration
+        # Role assignment section
+        roles:
+          - team: my_team
+            role: use   # This maps to "InstanceGroup Use"
 
-  tasks:
-
-    - name: Apply team role assignments
-      infra.aap_configuration.controller_role_team_assignment:
-        controller_host: "{{ controller_hostname }}"
-        controller_username: "{{ controller_username }}"
-        controller_password: "{{ controller_password }}"
-        controller_validate_certs: "{{ controller_validate_certs }}"
-
-        team: "{{ item.0.team }}"
-        role: "{{ item.0.role_definition }}"
-        target_name: "{{ item.1.name }}"
-        target_type: "{{ item.1.type }}"
-
-      loop: "{{ controller_role_team_assignments | subelements('assignment_objects') }}"
+  roles:
+    - infra.aap_configuration.controller_instance_groups
