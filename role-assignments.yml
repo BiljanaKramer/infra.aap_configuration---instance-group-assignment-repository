@@ -12,7 +12,7 @@
     controller_instance_groups:
       - name: my-instance-group
         roles:
-          use:
+          InstanceGroup Use:
             teams: 
               - my_team
 
