@@ -22,7 +22,7 @@
   tasks:
 
     - name: Apply team role assignments
-      infra.aap_configuration.role_team_assignment:
+      infra.aap_configuration.controller_role_team_assignment:
         controller_host: "{{ controller_hostname }}"
         controller_username: "{{ controller_username }}"
         controller_password: "{{ controller_password }}"
