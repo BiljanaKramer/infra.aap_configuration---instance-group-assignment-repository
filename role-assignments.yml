@@ -10,7 +10,7 @@
     controller_validate_certs: false
 
     controller_instance_groups:
-      - name: my_instance_group
+      - name: my-instance-group
         roles:
           - team: my_team
             role: use   # "InstanceGroup Use"
