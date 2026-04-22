@@ -12,8 +12,9 @@
     controller_instance_groups:
       - name: my-instance-group
         roles:
-          - team: my_team
-            role: use   # "InstanceGroup Use"
+          use:
+            teams: 
+              - my_team
 
   roles:
     - infra.aap_configuration.controller_instance_groups
