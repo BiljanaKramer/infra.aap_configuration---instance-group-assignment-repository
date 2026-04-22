@@ -4,9 +4,9 @@
   gather_facts: false
 
   vars:
-    controller_host: "https://vm-10-1-230-16.ans.cee.ral3.lab.eng.rdu2.redhat.com"
-    controller_username: "admin"
-    controller_password: "admin"
+    aap_hostname: "https://vm-10-1-230-59.ans.cee.ral3.lab.eng.rdu2.redhat.com"
+    aap_username: "admin"
+    aap_password: "gateway"
     controller_validate_certs: false
 
     controller_instance_groups:
