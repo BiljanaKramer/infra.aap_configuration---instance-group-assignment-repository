@@ -7,14 +7,14 @@
     aap_hostname: "https://vm-10-1-230-59.ans.cee.ral3.lab.eng.rdu2.redhat.com"
     aap_username: "admin"
     aap_password: "gateway"
-    controller_validate_certs: false
+    aap_validate_certs: false
 
     controller_instance_groups:
       - name: my-instance-group
         roles:
-          InstanceGroup Use:
+          use:
             teams: 
               - my_team
 
-  roles:
-    - infra.aap_configuration.controller_instance_groups
+  #roles:
+  #  - infra.aap_configuration.controller_instance_groups
