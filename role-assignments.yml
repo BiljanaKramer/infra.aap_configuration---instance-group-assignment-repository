@@ -10,11 +10,11 @@
     aap_validate_certs: false
 
     controller_instance_groups:
-      - name: my-instance-group
+      - name: "newInstanceGroup"
         roles:
           use:
             teams: 
-              - my_team
+              - "newTeam"
 
   roles:
     - infra.aap_configuration.controller_instance_groups
