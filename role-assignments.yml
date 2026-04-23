@@ -16,5 +16,5 @@
             teams: 
               - my_team
 
-  #roles:
-  #  - infra.aap_configuration.controller_instance_groups
+  roles:
+    - infra.aap_configuration.controller_instance_groups
