@@ -1,0 +1,20 @@
+---
+- name: Assign Execute role to a user
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+    aap_hostname: "vm-10-1-230-59.ans.cee.ral3.lab.eng.rdu2.redhat.com"
+    aap_username: "admin"
+    aap_password: "gateway"
+    aap_validate_certs: false
+
+    controller_workflow_job_templates:
+      - name: "testWorkflowJT"
+        roles:
+          execute:
+            users: 
+              - "biljana"
+
+  roles:
+    - infra.aap_configuration.controller_workflow_job_templates
