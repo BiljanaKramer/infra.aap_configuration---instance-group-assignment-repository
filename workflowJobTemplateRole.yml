@@ -10,11 +10,11 @@
     aap_validate_certs: false
 
     controller_workflow_job_templates:
-      - name: "testWorkflowJT"
+      - name: testWorkflowJT
         roles:
           execute:
             users: 
-              - "biljana"
+              - biljana
 
   roles:
     - infra.aap_configuration.controller_workflow_job_templates
