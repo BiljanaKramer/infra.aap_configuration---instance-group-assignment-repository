@@ -20,4 +20,4 @@
         user: biljana
   
   roles:
-    - infra.aap_configuration.controller_role_user_assignements
+    - infra.aap_configuration.controller_role_user_assignments
