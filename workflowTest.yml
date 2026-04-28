@@ -9,13 +9,13 @@
     aap_password: "gateway"
     aap_validate_certs: false
     
-    controller_workflow_job_templates:
-      - name: "testWorkflowJT"
-        description: "Workflow deployed via Configuration as Code"
-        organization: "Default"
+    #controller_workflow_job_templates:
+    #  - name: "testWorkflowJT"
+    #    description: "Workflow deployed via Configuration as Code"
+    #    organization: "Default"
     
     controller_roles:
-      - user: biljana
+      - user: bkramer
         workflow: "testWorkflowJT"
         role: execute
         
