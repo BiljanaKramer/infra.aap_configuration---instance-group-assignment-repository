@@ -9,7 +9,7 @@
     aap_password: "gateway"
     aap_validate_certs: false
     
-controller_workflow_job_templates:
+   controller_workflow_job_templates:
   - name: "testWorkflowJT"
     description: "Workflow deployed via Configuration as Code"
     organization: "Default"
@@ -20,3 +20,5 @@ controller_role_user_assignments:
     object_id: 57
     user: biljana
   
+roles:
+    - infra.aap_configuration.controller_role_user_assignements
