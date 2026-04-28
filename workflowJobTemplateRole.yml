@@ -15,6 +15,7 @@
           execute:
             users: 
               - biljana
+              - bkramer
 
   roles:
     - infra.aap_configuration.controller_workflow_job_templates
