@@ -1,0 +1,22 @@
+---
+- name: Assign Execute role to a user
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+    aap_hostname: "vm-10-1-230-59.ans.cee.ral3.lab.eng.rdu2.redhat.com"
+    aap_username: "admin"
+    aap_password: "gateway"
+    aap_validate_certs: false
+    
+controller_workflow_job_templates:
+  - name: "testWorkflowJT"
+    description: "Workflow deployed via Configuration as Code"
+    organization: "Default"
+    # Exhaustively add all other required workflow parameters here
+
+controller_role_user_assignments:
+  - role_definition: "WorkflowJobTemplate Execute"
+    object_id: 57
+    user: biljana
+  
