@@ -14,10 +14,10 @@
         description: "Workflow deployed via Configuration as Code"
         organization: "Default"
     
-    controller_role_user_assignments:
-      - role_definition: "WorkflowJobTemplate Execute"
-        object_id: 57
-        user: biljana
-  
+    controller_roles:
+      - user: biljana
+        workflow: "testWorkflowJT"
+        role: execute
+        
   roles:
-    - infra.aap_configuration.controller_role_user_assignments
+    - infra.aap_configuration.controller_roles
